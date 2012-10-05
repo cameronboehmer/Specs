@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.description = 'To integrate after adding this pod, continue with step 8 here: https://parse.com/apps/quickstart'
   s.source_files = 'ParseDummy.{m,h}'
   s.frameworks = 'AudioToolbox', 'CFNetwork', 'SystemConfiguration', 'MobileCoreServices', 'CoreGraphics', 'Security', 'QuartzCore', 'Parse'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Parse"' }
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Parse"', 'OTHER_LINKER_FLAGS' => '-fno-obj-arc'}
   s.library = 'z'
 end
